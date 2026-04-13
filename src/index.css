@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Mono:wght@100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+img, video {
+    max-width: 100%;
+    display: block;
+}
+
+/* Transformando Tipografia Global */
+body {
+    --font-heading: 'Manrope', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+    --btn-duration: 0.6s;
+    --btn-ease: cubic-bezier(0.25, 1, 0.5, 1);
+    
+    font-family: var(--font-heading);
+    
+    background-color: #f7f7f5; 
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased; 
+}
+
