@@ -1,16 +1,78 @@
-# React + Vite
+# Meu Clone - Landing Page (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de estudo front-end com foco em layout moderno, animações e responsividade.
 
-Currently, two official plugins are available:
+## Sobre
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este projeto foi desenvolvido como clone visual de uma landing page institucional, usando componentes React e CSS Modules.
 
-## React Compiler
+Principais objetivos:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Praticar componentização com React.
+- Trabalhar layout responsivo (mobile, tablet e desktop).
+- Reproduzir seções com visual mais avançado (cards com recorte, hero com vídeo, marquee e navbar fixa).
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite 8
+- CSS Modules
+- ESLint
+
+## Como executar localmente
+
+### 1) Clonar o repositório
+
+```bash
+git clone <URL_DO_SEU_REPOSITORIO>
+cd meu-clone
+```
+
+### 2) Instalar dependências
+
+```bash
+npm install
+```
+
+### 3) Rodar em desenvolvimento
+
+```bash
+npm run dev
+```
+
+Abra no navegador o endereço exibido no terminal (normalmente `http://localhost:5173`).
+
+## Scripts disponíveis
+
+- `npm run dev`: inicia o servidor de desenvolvimento.
+- `npm run build`: gera a versão de produção na pasta `dist`.
+- `npm run preview`: sobe uma prévia local do build de produção.
+- `npm run lint`: executa a análise de lint.
+
+## Estrutura do projeto
+
+```text
+src/
+	components/
+		Navbar.jsx
+		Hero.jsx
+		WhatWeDo.jsx
+		PlatformIntro.jsx
+		FeatureCards.jsx
+		Marquee.jsx
+		OurCompany.jsx
+		Newsroom.jsx
+		Footer.jsx
+	assets/
+		images/
+	App.jsx
+	main.jsx
+```
+
+## Status
+
+Projeto ativo para estudo e evolução de UI responsiva.
+
+## Autor
+
+Desenvolvido por Rafhael.
