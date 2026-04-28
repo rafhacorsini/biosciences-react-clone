@@ -1,0 +1,442 @@
+.newsroomSection {
+  background-color: #EAEAE4;
+  padding: 80px 0 60px 0;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 335px;
+  margin: 0 auto 1.5rem auto;
+  padding: 0;
+}
+
+.sectionTitle {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: #22313A;
+  font-weight: 500;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.viewAllBtn {
+  background-color: #22313A;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  gap: 12px;
+  transition: opacity 0.2s;
+}
+
+.viewAllBtn:hover {
+  opacity: 0.8;
+}
+
+.viewAllArrow {
+  background-color: #CEF79E;
+  color: #22313A;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.featuredWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+  width: max-content;
+  position: relative;
+}
+
+.featuredCard {
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 335px;
+  height: 620px;
+
+  clip-path: path("M335 581C335 584.866 331.866 588 328 588H306.834C303.539 588 300.69 590.297 299.993 593.517L295.448 614.483C294.75 617.703 291.901 620 288.607 620H7C3.134 620 0 616.866 0 613V7C0 3.134 3.134 0 7 0H328C331.866 0 335 3.134 335 7V581Z");
+}
+
+.featuredImage {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cardBody {
+  padding: 1rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.tagLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f7f7f5;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #22313A;
+  font-weight: 600;
+}
+
+.greenSquare {
+  width: 10px;
+  height: 10px;
+  background-color: #A7E26E;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.dateLabel {
+  color: #888;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: #22313A;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+
+.cardDesc {
+  color: #4a5459;
+  line-height: 1.4;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  opacity: 0.85;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+  flex-grow: 1;
+}
+
+.miniCardsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.875rem;
+  width: 100%;
+}
+
+.miniCardWrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: max-content;
+}
+
+.miniCard {
+  position: relative;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  width: 335px;
+  height: 213px;
+  clip-path: path("M335 174C335 177.866 331.866 181 328 181H306.834C303.539 181 300.69 183.297 299.993 186.517L295.448 207.483C294.75 210.703 291.901 213 288.607 213H6.99999C3.134 213 0 209.866 0 206V7C0 3.13401 3.13401 0 7 0H328C331.866 0 335 3.13401 335 7V174Z");
+}
+
+.miniCardTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-top: 1rem;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #22313A;
+}
+
+.dark {
+  background-color: #22313A;
+  color: #ffffff;
+}
+
+.dark .tagLabel {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.dark .dateLabel {
+  color: #babcaf;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 1rem;
+  padding-bottom: 4px;
+}
+
+.readArticle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.featuredArrowBtn,
+.cardArrowBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #22313A;
+  background-color: #CEF79E;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  outline: none;
+
+  width: 31.79px;
+  height: 28px;
+  clip-path: path("M7.07291 3.24439C7.80473 1.29287 9.67033 0 11.7546 0H26.7896C29.551 0 31.7896 2.23858 31.7896 5V23C31.7896 25.7614 29.551 28 26.7896 28H5.00455C1.51352 28 -0.902876 24.5131 0.322907 21.2444L7.07291 3.24439Z");
+}
+
+.featuredArrowBtn:hover,
+.cardArrowBtn:hover {
+  background-color: #A7E26E;
+}
+
+.arrowText {
+  color: #22313A;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sectionHeader {
+    width: min(720px, calc(100% - 48px));
+  }
+
+  .featuredWrapper {
+    width: min(720px, calc(100% - 48px));
+    margin-bottom: 1.5rem;
+  }
+
+  .featuredCard {
+    flex-direction: row;
+    padding: 1rem;
+    width: 100%;
+    height: 390px;
+    clip-path: path("M720 349.5C720 352.538 717.538 355 714.5 355H688.799C686.391 355 684.268 356.565 683.549 358.87L675.114 385.13C674.395 387.435 672.272 389 669.864 389H7C3.962 389 1.5 386.538 1.5 383.5V7C1.5 3.962 3.962 1.5 7 1.5H714.5C717.538 1.5 720 3.962 720 7V349.5Z");
+  }
+
+  .featuredImage {
+    width: 50%;
+    height: 100%;
+    border-radius: 14px;
+  }
+
+  .cardBody {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  .cardTitle {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.05;
+  }
+
+  .cardDesc {
+    font-size: 0.95rem;
+  }
+
+  .featuredArrowBtn {
+    width: 38px;
+    height: 30px;
+    clip-path: path("M8.4864 3.48079C9.3179 1.50418 11.2525 0.208984 13.394 0.208984H31.4039C34.0244 0.208984 36.1518 2.3364 36.1518 4.95691V25.4491C36.1518 28.0697 34.0244 30.1971 31.4039 30.1971H5.1586C1.65126 30.1971 -0.759476 26.6618 0.491416 23.3856L8.4864 3.48079Z");
+  }
+}
+
+@media (min-width: 1024px) {
+  .newsroomSection {
+    padding: 100px 0;
+  }
+
+  .sectionHeader {
+    width: 960px;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .viewAllBtn {
+    display: flex;
+  }
+
+  .featuredArrowBtn,
+  .cardArrowBtn {
+    width: 45.77px;
+    height: 34.59px;
+    clip-path: path("M11.5697 3.45203C12.6083 1.33882 14.7581 0 17.1128 0H39.5898C43.0009 0 45.7662 2.76529 45.7662 6.17645V28.4117C45.7662 31.8228 43.0009 34.5881 39.5898 34.5881H6.18423C1.61117 34.5881 -1.37605 29.7914 0.641122 25.6873L11.5697 3.45203Z");
+  }
+
+  .featuredWrapper {
+    width: max-content;
+    margin-bottom: 2rem;
+  }
+
+  .featuredCard {
+    flex-direction: row;
+    padding: 1.5rem;
+
+    width: 960px;
+    height: 450px;
+
+    clip-path: path("M960 403C960 406.866 956.866 410 953 410H920.443C917.384 410 914.679 411.987 913.764 414.906L904.3 445.094C903.385 448.013 900.68 450 897.62 450H7C3.134 450 0 446.866 0 443V7C0 3.134 3.134 0 7 0H953C956.866 0 960 3.134 960 7V403Z");
+  }
+
+  .featuredImage {
+    width: 50%;
+    height: 100%;
+  }
+
+  .cardBody {
+    width: 50%;
+    padding: 3rem;
+  }
+
+  .cardTitle {
+    font-size: 2.5rem;
+  }
+
+  .cardDesc {
+    font-size: 1.1rem;
+  }
+
+  .miniCardsContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .miniCardWrapper {
+    flex: 0 0 auto;
+    position: relative;
+    width: max-content;
+  }
+
+  .miniCard {
+    width: 412px;
+    height: 350px;
+    clip-path: path("M412 303C412 306.866 408.866 310 405 310H372.443C369.384 310 366.679 311.987 365.764 314.906L356.3 345.094C355.385 348.013 352.68 350 349.62 350H7C3.134 350 0 346.866 0 343V7C0 3.134 3.134 0 7 0H405C408.866 0 412 3.134 412 7V303Z");
+  }
+
+  .miniCardTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1349px) {
+  .sectionHeader {
+    width: min(960px, calc(100% - 48px));
+  }
+
+  .miniCardsContainer {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 1rem;
+    width: min(960px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+
+  .miniCardWrapper {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+  }
+
+  .miniCard {
+    width: 100%;
+    height: clamp(280px, 30vw, 340px);
+    padding: 1.25rem;
+    clip-path: none;
+    border-radius: 18px;
+  }
+
+  .miniCardTitle {
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+    line-height: 1.15;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .cardFooter {
+    margin-top: auto;
+    padding-bottom: 0;
+  }
+
+  .readArticle {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  .sectionHeader {
+    width: 1300px;
+  }
+
+  .featuredCard {
+    width: 1300px;
+    height: 450px;
+
+    clip-path: path("M1300 403C1300 406.866 1296.866 410 1293 410H1260.443C1257.384 410 1254.679 411.987 1253.764 414.906L1244.3 445.094C1243.385 448.013 1240.68 450 1237.62 450H7C3.134 450 0 446.866 0 443V7C0 3.134 3.134 0 7 0H1293C1296.866 0 1300 3.134 1300 7V403Z");
+  }
+
+  .miniCardsContainer {
+    width: 1300px;
+    justify-content: space-between;
+    gap: 0;
+  }
+}

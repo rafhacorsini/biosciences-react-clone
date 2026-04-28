@@ -1,0 +1,32 @@
+.marqueeSection {
+  background-color: #f7f7f5;
+  overflow: hidden;
+  padding: 80px 0; 
+  position: relative;
+  z-index: 2;
+  user-select: none;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.marqueeText {
+  font-size: clamp(3rem, 10vw, 9.5rem); 
+  color: #22313a;
+  font-weight: 400;
+  letter-spacing: -3px;
+  padding-right: 60px;
+  white-space: nowrap; 
+}
+
+@media (min-width: 768px) {
+  .marqueeSection { 
+      padding: 120px 0; 
+  }
+  .marqueeText { 
+      padding-right: 120px; 
+  }
+}

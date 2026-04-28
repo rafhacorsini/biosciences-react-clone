@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import styles from './Hero.module.css';
 
-// Caminhos dos seus arquivos (Confira se estão assim no seu projeto)
 import heroVideo from '../assets/images/video-bg.mp4';
-import btnDark from '../assets/images/btn-dark.svg';   
+import btnDark from '../assets/images/btn-dark.svg';
 import btnGreen from '../assets/images/btn-green.svg'; 
 
 export function Hero() {
@@ -24,8 +23,7 @@ export function Hero() {
     }, []);
 
     return(
-        <> 
-            
+        <>
             <video 
                 src={heroVideo} 
                 className={`${styles.bgVideo} ${isScrolled ? styles.videoEsticado : ''}`}
@@ -34,32 +32,29 @@ export function Hero() {
                 muted 
                 playsInline
             />
-
-            
             <div className={styles.heroContainer}>
-                
                 <div className={styles.heroContent}>
                     <h1 className={styles.title}>
-                        Engineering the<br/>
-                        future of <br />
-                        aging medicine
+                        Engineering the future<br/>
+                        of aging medicine.
                     </h1>
 
-                    <p className={styles.subtitle}>
-                        We unravel complex biology with optogenetics, chemistry, and <br />
-                        AI for small molecule therapeutic discovery.
-                    </p>
-                    
-                    <div className={styles.actions}>
-                        <button className={styles.btnDiscover}>
-                            <img src={btnDark} alt="Botão Descobrir" className={styles.btnBackground} />
-                            <span className={styles.btnText}>DISCOVER OUR PLATFORM</span>
-                        </button>
+                    <div className={styles.heroFooter}>
+                        <p className={styles.subtitle}>
+                            We unravel complex biology with optogenetics, chemistry, and <br />
+                            AI for small molecule therapeutic discovery.
+                        </p>
                         
-                        <button className={styles.btnArrow}>
-                            <img src={btnGreen} alt="Botão Seta" className={styles.btnBackground} />
-                            <span className={styles.btnTextArrow}>→</span> 
-                        </button>
+                        <div className={styles.actions}>
+                            <button className={styles.btnDiscover}>
+                                <img src={btnDark} alt="Botão Descobrir" className={styles.btnBackground} />
+                                <span className={styles.btnText}>DISCOVER OUR PLATFORM</span>
+                            </button>
+                            <button className={styles.btnArrow}>
+                                <img src={btnGreen} alt="Botão Seta" className={styles.btnBackground} />
+                                <span className={styles.btnTextArrow}>→</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
 

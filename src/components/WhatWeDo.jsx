@@ -79,7 +79,6 @@ export function WhatWeDo() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-  // Safe DOM Ref Assignment
   const setContentRef = (el, ind) => {
     if (el) textRefs.current[ind] = el;
   };
@@ -87,7 +86,10 @@ export function WhatWeDo() {
   return (
     <section className={styles.whatWeDoWrapper} ref={sectionRef}>
       <div className={styles.stickyContent}>
-        <p className={styles.sectionLabel}>WHAT WE DO</p>
+        <p className={styles.sectionLabel}>
+          <span className={styles.greenSquare}></span>
+          WHAT WE DO
+        </p>
 
         <div className={styles.progressTrack}>
           <div className={styles.progressBar} ref={progressBarRef}></div>

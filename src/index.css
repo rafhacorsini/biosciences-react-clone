@@ -7,12 +7,17 @@
 }
 
 
+html {
+    /* Reserva espaço fixo para scrollbar — evita o bug do 100vw no Windows */
+    scrollbar-gutter: stable;
+}
+
 img, video {
     max-width: 100%;
     display: block;
 }
 
-/* Transformando Tipografia Global */
+
 body {
     --font-heading: 'Manrope', sans-serif;
     --font-mono: 'Roboto Mono', monospace;

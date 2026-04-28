@@ -1,0 +1,203 @@
+.companySection {
+  background-color: #f7f7f5;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 1.5rem 60px 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.panelCap {
+  position: absolute;
+  top: 40px;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 20px;
+  border-top: 1px solid rgba(83, 83, 83, 0.15);
+  border-left: 1px solid rgba(83, 83, 83, 0.15);
+  border-right: 1px solid rgba(83, 83, 83, 0.15);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  pointer-events: none;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: #22313A;
+  background-color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.greenSquare {
+  width: 10px;
+  height: 10px;
+  background-color: #A7E26E;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.contentRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heroImage {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.sectionTitle {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  color: #22313A;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.textColumns {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.textColumns p {
+  font-size: 0.9rem;
+  color: #4a5459;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-left: -8px;
+}
+
+.btnDiscover,
+.btnArrow {
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.btnDiscover { width: 230px; height: 55px; }
+.btnArrow    { width: 60px;  height: 55px; }
+
+.btnDiscover:hover,
+.btnArrow:hover { transform: translateY(-3px); }
+
+.btnBackground {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+.btnText {
+  position: relative;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding-right: 18px;
+}
+
+.btnTextArrow {
+  position: relative;
+  color: #22313A;
+  font-size: 1.4rem;
+  margin-left: 5px;
+}
+
+
+@media (min-width: 1024px) {
+
+  .inner {
+    padding: 80px 3rem 80px 3rem;
+    gap: 2.5rem;
+  }
+
+  .panelCap {
+    left: 3rem;
+    right: 3rem;
+  }
+
+  .contentRow {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 3.5rem;
+  }
+
+  .heroImage {
+    width: 46%;
+    flex-shrink: 0;
+    align-self: stretch;
+    height: 0;
+    min-height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .textContent {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sectionTitle {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    margin-bottom: 2rem;
+  }
+
+  .textColumns {
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .textColumns > * {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .textColumns p {
+    font-size: 0.88rem;
+  }
+}
